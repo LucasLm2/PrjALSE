@@ -4,6 +4,12 @@
 	padding-top: 100px;
 }
 
+#logomarca {
+	margin: 5px -5px;
+	padding: 5px 10px;
+	background-color: rgba(255,255,255,0.45);
+}
+
 #imgTelaToda {
 	/* Imagem */
     background-image: url(../img/01.jpg);
