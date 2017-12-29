@@ -1,12 +1,31 @@
 /* CSS Document */
-
-.nsobrepor {
-	padding-top: 100px;
+body {
+	position: relative; 
 }
 
 .logomarca {
 	margin: 5px -5px;
 	padding: 5px 10px;
+}
+.separar-secao {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+.pddgt-px-100{
+	padding-top: 100px;
+}
+
+footer {
+	color: lightgrey;
+}
+.bg-dark1 {
+	background-color: #22262a !important;
+}
+#footer-end {
+	padding: 25px;
+}
+#footer-end p {
+	margin: 0;
 }
 
 .bg-grey {

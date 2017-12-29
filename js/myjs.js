@@ -2,7 +2,7 @@
 jQuery(function () {
 	'use strict';
 	jQuery(window).scroll(function () {
-		if (jQuery(this).scrollTop() > 50) {
+		if (jQuery(document).scrollTop() > 50) {
 			$("#menu").removeClass("navbar-dark");
 			$("#menu").addClass("bg-grey navbar-orange-red");
 			$("#logo").attr("src", "img/logoblack.png");
@@ -14,21 +14,29 @@ jQuery(function () {
 	});
 });
 
-/*jQuery(function (a){
-	"use strict";
-	a('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-		if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
-			var e = a(this.hash);
-			if ((e = e.length ? e : a("[name=" + this.hash.slice(1) + "]")).length) { 
-				return a("html, body").animate({ scrollTop: e.offset().top - 100}, 1e3, "easeInOutExpo"), !1;
-			}
-		}
-	}), 
-	a(".js-scroll-trigger").click(function () {
-		a(".navbar-collapse").collapse("hide");
-	}),
-	a("body").scrollspy({
-		target: "#menu",
-		offset: 100
+$(document).ready(function () {
+	'use strict';
+	// Adicione scrollspy para o <body>
+	$('body').scrollspy({
+		target: ".navbar",
+		offset: 105
 	});
-});*/
+
+	// Adicione uma rolagem suave em todos os links dentro da barra de navegação
+	$("#menuTopo a").on('click', function (event) {
+		// Certifique-se de que this.hash tenha um valor antes de substituir o comportamento padrão
+		if (this.hash !== "") {
+			// evitar o comportamento padrão do clique da âncora
+			event.preventDefault();
+
+			// Store hash
+			var hash = this.hash;
+
+			// Usando o método animate () do jQuery para adicionar uma página suave
+			// O número opcional (800) especifica o número de milissegundos necessários para rolar para a área especificada
+			$('html, body').animate({
+				scrollTop: ($(hash).offset().top) - 104
+			}, 800);
+		} // fim do if
+	});
+});
