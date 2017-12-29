@@ -36,26 +36,29 @@
 					<div class="collapse navbar-collapse justify-content-end" id="menuTopo">
 						<ul class="nav navbar-nav">
 							<li  class="nav-item">
-								<a class="nav-link  js-scroll-trigger" href="#inicio">Início</a>
+								<a class="nav-link" href="#inicio">Início</a>
 							</li>
 							<li  class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="#sobre">Sobre</a>
+								<a class="nav-link" href="#sobre">Sobre</a>
 							</li>
 							<li  class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="#servicos">Serviços</a>
+								<a class="nav-link" href="#servicos">Serviços</a>
 							</li>
 							<li  class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="#contato">Contato</a>
+								<a class="nav-link" href="#contato">Contato</a>
 							</li>
 							<li  class="nav-item">
-								<a class="nav-link" href="#" ><i class="fa fa-globe"></i></a>
+								<div id="google_translate_element" class="nav-link"></div>
+							</li>
+							<li  class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" onClick="open_translate(this)"><i class="fa fa-globe"></i></a>
 							</li>
 						</ul>
 					</div>
 				</nav>
 			</div>
 			
-			<div class="pddgt-px-100 h-100">
+			<div id="carousel" class="h-100">
 				<div id="carouselExampleIndicators" class="h-100 carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -114,7 +117,7 @@
     <main>
 		<section id="sobre" class="separar-secao">
 			<div class="container text-center">
-				<h1>
+				<h1 class="pddgbt-px-50">
 					A AL Support Electronic
 				</h1>
 				<p>Eu cillum commodo aliquip quis do ipsum. Pariatur exercitation veniam duis laboris aliqua consectetur eu qui
@@ -128,7 +131,7 @@
         </section>
         <section  id="servicos" class="separar-secao">
 			<div class="container text-center">
-				<h1>Serviços</h1>
+				<h1  class="pddgbt-px-50">Serviços</h1>
 				<div class="card-deck">
 					<div class="card">
 						<!-- adicionar espaço via css -->
@@ -203,29 +206,34 @@
             </div>
         </section>
         <section  id="contato" class="separar-secao">
-            <h1>Contato</h1>
-            <div>
-                <form>
-                    <div>
-                        <label for="nome">Nome:</label>
-                        <input id="nome" name="nome" type="text" placeholder="Informe o Nome" />
-                    </div>
+			<div class="container">
+				<h1 class="text-center pddgbt-px-50">Contato</h1>
+				<div class="row align-items-start">
+					<div class="col-sm-6">
+						<form action="#">
+							<div class="form-group">
+								<label for="nome">Nome:</label>
+								<input id="nome" name="nome" type="text" class="form-control" placeholder="Informe o Nome" />
+							</div>
 
-                    <div>
-                        <label for="email">Email:</label>
-                        <input id="email" name="email" type="email" placeholder="Informe o Email" />
-                    </div>
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input id="email" name="email" class="form-control" type="email" placeholder="Informe o Email" />
+							</div>
 
-                    <div>
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" cols="5" rows="3"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!4v1513903027530!6m8!1m7!1sBM-r14Iugl1c81ju3oGYAw!2m2!1d-12.61659939073542!2d-38.30072074768601!3f292.429596034894!4f-13.200156322283632!5f1.1924812503605782"
-                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+							<div class="form-group">
+								<label for="mensagem">Mensagem:</label>
+								<textarea id="mensagem" name="mensagem" class="form-control"></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</form>
+					</div>
+					<div  class="col-sm-6">
+						<h5>Localização:</h5>
+						<div id="map"></div>
+					</div>
+				</div>
+			</div>
         </section>
     </main>
     <footer>
@@ -258,8 +266,16 @@
 	<script src="js/bootstrap/bootstrap.js" ></script>
 	<!-- <script src="js/bootstrap/bootstrap.min.js" ></script> -->
 	
+	
+	<!-- API Google Translate -->
+	<script src="https://translate.google.com/translate_a/element.js"></script>
+	
+	<!-- API Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5cakuY-Cz4Azc12QUJcni88BEIH8FY34&callback=myMap"
+    async defer></script>
+	
+	
 	<!-- Meu JavaScript-->
 	<script src="js/myjs.js" ></script>
-	
 </body>
 </html>

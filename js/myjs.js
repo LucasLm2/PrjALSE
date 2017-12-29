@@ -40,3 +40,36 @@ $(document).ready(function () {
 		} // fim do if
 	});
 });
+
+// Função google Maps
+function myMap() {
+	'use strict';
+	var myCenter = new google.maps.LatLng(-12.6166117,-38.30086159999996);
+	var mapCanvas = document.getElementById("map");
+	var mapOptions = {center: myCenter, zoom: 16};
+	var map = new google.maps.Map(mapCanvas, mapOptions);
+	var marker = new google.maps.Marker({position:myCenter});
+	marker.setMap(map);
+}
+
+	// Função google Translate
+	function googleTranslateElementInit() {
+		'use strict';
+  		new google.translate.TranslateElement({pageLanguage: 'pt-BR', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		
+	}
+
+function open_translate(elmnt) {
+	'use strict';
+  	var a = document.getElementById("google_translate_element");
+	if (a.style.display == "block") {
+		a.style.display = "none";
+		elmnt.innerHTML = "<i class='fa fa-globe'></i>";
+	} else {
+		if(!document.getElementById(":0.targetLanguage")){
+			googleTranslateElementInit();
+		}
+		a.style.display = "block";
+		elmnt.innerHTML = "X";
+	}
+}

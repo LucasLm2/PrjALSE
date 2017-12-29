@@ -8,10 +8,13 @@ body {
 	padding: 5px 10px;
 }
 .separar-secao {
-	padding-top: 75px;
-	padding-bottom: 75px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 }
-.pddgt-px-100{
+.pddgbt-px-50{
+	padding-bottom: 50px;
+}
+.carousel{
 	padding-top: 100px;
 }
 
@@ -120,4 +123,9 @@ body,
 #sobre {
 	background-color: rgba(227,86,54, 0.9);
 	color: white;
+}
+
+#map {
+	width: 100%;
+	height: 300px;
 }
