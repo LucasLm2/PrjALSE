@@ -15,7 +15,10 @@ body {
 	padding-bottom: 50px;
 }
 .carousel{
-	padding-top: 100px;
+	padding-top: 90px;
+}
+.color-icons {
+	color: rgba(227,86,54, 0.9);
 }
 
 footer {
