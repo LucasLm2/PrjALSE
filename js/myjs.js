@@ -35,7 +35,7 @@ $(document).ready(function () {
 			// Usando o método animate () do jQuery para adicionar uma página suave
 			// O número opcional (800) especifica o número de milissegundos necessários para rolar para a área especificada
 			$('html, body').animate({
-				scrollTop: ($(hash).offset().top) - 104
+				scrollTop: ($(hash).offset().top) - 100
 			}, 800);
 		} // fim do if
 	});

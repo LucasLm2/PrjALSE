@@ -2,7 +2,16 @@
 body {
 	position: relative; 
 }
+.parallax {
+    /* The image used */
+    background:linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("../img/02.jpg");
 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .logomarca {
 	margin: 5px -5px;
 	padding: 5px 10px;
@@ -134,7 +143,6 @@ body,
 }
 
 #sobre {
-	background-color: rgba(227,86,54, 0.9);
 	color: white;
 }
 
