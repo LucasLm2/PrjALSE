@@ -36,22 +36,22 @@
 					</button>
 					<div class="collapse navbar-collapse justify-content-end" id="menuTopo">
 						<ul class="nav navbar-nav">
-							<li  class="nav-item">
+							<li id="home" class="nav-item">
 								<a class="nav-link" href="#inicio">Início</a>
 							</li>
-							<li  class="nav-item">
+							<li class="nav-item">
 								<a class="nav-link" href="#servicos">Serviços</a>
 							</li>
 							<li  class="nav-item">
 								<a class="nav-link" href="#sobre">Sobre</a>
 							</li>
-							<li  class="nav-item">
+							<li class="nav-item">
 								<a class="nav-link" href="#contato">Contato</a>
 							</li>
-							<li  class="nav-item">
+							<li class="nav-item">
 								<div id="google_translate_element" class="nav-link"></div>
 							</li>
-							<li  class="nav-item">
+							<li class="nav-item">
 								<a class="nav-link" href="javascript:void(0)" onClick="open_translate(this)"><i class="fa fa-globe"></i></a>
 							</li>
 						</ul>
@@ -74,19 +74,19 @@
 						<div class="carousel-item active">
 							<div class="carousel-caption">
 								<h3>AL Support Electronic</h3>
-								<p>Qualidade, Eficiência e Excelência. Apenas aqui você vai encontrar.</p>
+								<p>Apenas aqui você vai encontrar qualidade, eficiência e excelência.</p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<div class="carousel-caption">
 								<h3>Qualidade</h3>
-								<p>Aperfeiçoamento continuo + Solução de falhas. Trabalhamos com garantia total e documentada.</p>
+								<p>Aperfeiçoamento contínuo e solução de falhas. Trabalhamos com garantia total e documentada.</p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<div class="carousel-caption">
 								<h3>Eficiência</h3>
-								<p>Processos automatizados + Técnologias atualizadas. Oferecemos a melhor e mais rápida solução de problemas.</p>
+								<p>Processos automatizados com tecnologias atualizadas. Oferecemos a melhor e mais rápida solução de problemas.</p>
 							</div>
 						</div>
 						<div class="carousel-item">
@@ -122,6 +122,7 @@
 			<div class="container">
 				<div class="pdd-bt-50 text-center">
 					<h1>Serviços</h1>
+					<hr />
 				</div>
 				<div class="row no-gutters">
 					<div class="col-lg-6 service-item">
@@ -179,7 +180,7 @@
 				</h1>
 				<div class="text-justify">
 					<p>
-						Fundada em 2014 a AL Support Electronic nasceu com a vontade de revolucionar o mercado de TI em Dias D'Àvila e região, trabalhando sempre a favor do cliente com soluções empresariais e domésticas. Vendo a necessidade do mercado local, nós iniciamos um projeto para juntar em um só lugar todas as soluções que a área de TI pode oferecer, trazendo novos serviços e facilitando a vida dos nossos clientes. Trabalhando com: 
+						Fundada em 2014 a AL Support Electronic nasceu com a vontade de revolucionar o mercado de TI em Dias D'Àvila e região, trabalhando sempre a favor do cliente com soluções empresariais e domésticas. Entendendo a necessidade do mercado local, nós iniciamos um projeto para juntar em um só lugar todas as soluções que a área de TI pode oferecer, trazendo novos serviços e facilitando a vida dos nossos clientes. Trabalhando com: 
 					</p>
 					<p>
 						Qualidade - Aperfeiçoando continuamente os serviços prestados e apresentando soluções sobre falhas, com garantia documentada.
@@ -188,7 +189,7 @@
 						Eficiência - Com processos automatizados e tecnologias constantemente atualizadas, levamos até você as melhores e mais seguras informações disponíveis para a solução de problemas, de forma rápida, diferenciada e com os mais baixos custos do mercado atual.
 					</p>
 					<p>
-						Excelência - Tudo que voçê precisa para o aumento da produtividade. Com responsabilidade e comprometimento.
+						Excelência - Tudo que você precisa para o aumento da produtividade, com responsabilidade e comprometimento.
 					</p>
 					<p>Assim trazemos o melhor e mais especializado conjunto de soluções e opções de TI para casas e empresas, facilitando seu desenvolvimento e diminuindo seus custos. A AL Support Electronic é a melhor e mais completa solução para você.</p>
 				</div>
@@ -197,13 +198,16 @@
 		<!-- ========================== Seção Contato ============================-->
         <section  id="contato" class="separar-secao">
 			<div class="container">
-				<h1 class="text-center pdd-bt-50">Contato</h1>
+				<div class="text-center pdd-bt-50">
+					<h1>Contato</h1>
+					<hr />
+				</div>
 				<div class="row align-items-start">
-					<div class="col-sm-6">
-						<form action="#">
+					<div class="col-sm-6">						
+						<form method="post" action="http://www.alsupport.com.br/cgi-bin/FormMail.pl"  accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset;  document.charset = 'ISO-8859-1';  window.onbeforeunload = function () {document.charset=originalCharset;};">
 							<div class="form-group">
 								<label for="nome">Nome:</label>
-								<input id="nome" name="nome" type="text" class="form-control" placeholder="Informe o Nome" />
+								<input id="nome" name="realname" type="text" class="form-control" placeholder="Informe o Nome" />
 							</div>
 
 							<div class="form-group">
@@ -213,9 +217,14 @@
 
 							<div class="form-group">
 								<label for="mensagem">Mensagem:</label>
-								<textarea id="mensagem" name="mensagem" class="form-control"></textarea>
+								<textarea name="message" class="form-control"></textarea>
 							</div>
-							<button type="submit" class="btn btn-primary">Enviar</button>
+							<input type="submit" class="btn btn-primary" value="Enviar" />
+							<input type="hidden" name="recipient" value="contato@alsupport.com.br" />
+							<input type="hidden" name="subject" value="Subject" />
+							<input type="hidden" name="redirect"  value="http://www.alsupport.com.br" />
+							<input type="hidden" name="missing_fields_redirect"  value="http://www.example.com/erro.html" />
+							<input type="hidden" name="required" value="realname,email,message" />
 						</form>
 					</div>
 					<div  class="col-sm-6">

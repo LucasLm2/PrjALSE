@@ -6,16 +6,21 @@ jQuery(function () {
 			$("#menu").removeClass("navbar-dark");
 			$("#menu").addClass("bg-grey navbar-orange-red");
 			$("#logo").attr("src", "img/logoblack.png");
+			$("#home").show();
 		} else {
 			$("#menu").removeClass("bg-grey navbar-orange-red");
 			$("#menu").addClass("navbar-dark");
 			$("#logo").attr("src", "img/logo.png");
+			$("#home").hide();
 		}
 	});
 });
 
 $(document).ready(function () {
 	'use strict';
+	
+	
+	
 	// Adicione scrollspy para o <body>
 	$('body').scrollspy({
 		target: ".navbar",
